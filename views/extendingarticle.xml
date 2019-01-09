@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<odoo>
+
+     <record  model="ir.ui.view" id="extendingarticle">
+            <field name="name">extending.view.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+
+            <field name="arch" type="xml">
+                    <notebook position="inside">
+                    <page string="dodation">
+                        <group>
+                            <field name="isdotation"/>
+                        </group>
+                    </page>
+                </notebook>
+
+            </field>
+    </record>
+
+    <record id="article_view_tree" model="ir.ui.view">
+
+            <field name="name">article.view.tree</field>
+
+            <field name="model">product.template</field>
+
+            <field name="type">tree</field>
+
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+
+                <tree position="inside">
+                    <field name="isdotation"/>
+                </tree>
+
+            </field>
+
+        </record>
+
+    <record id="idarticle" model="ir.actions.act_window">
+
+            <field name="name">Extendingarticle</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">tree,form</field>
+
+     </record>
+
+            <menuitem id="article_menu" name="article"
+                  parent="decharge_menu" action="idarticle"/>
+        <!--menuitem id="contact_menu" name="article"
+                  parent="configuration_menu"
+                  action="idarticle"/-->
+
+
+</odoo>

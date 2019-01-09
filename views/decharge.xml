@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<odoo>
+
+    <data>
+        <record id="decharge_form_view" model="ir.ui.view">
+
+            <field name="name">decharge.form.view</field>
+
+            <field name="model">decharge</field>
+
+            <field name="type">form</field>
+
+
+            <field name="arch" type="xml">
+
+
+                <form string="decharge">
+			<sheet>
+                        <group>
+                            <field name="date"/>
+                            <field name="employe"/>
+                            <field name="lignedech"/>
+                            <field name="etat"/>
+                        </group>
+			</sheet>
+		</form>
+	     </field>
+	  </record>
+
+	<record id="decharge_view_tree" model="ir.ui.view">
+
+            <field name="name">decharge.view.tree</field>
+
+            <field name="model">decharge</field>
+
+            <field name="type">tree</field>
+
+
+            <field name="arch" type="xml">
+
+
+                <tree string="decharge">
+                    <field name="date"/>
+                    <field name="employe"/>
+                    <field name="lignedech"/>
+                    <field name="etat"/>
+                </tree>
+
+
+
+            </field>
+
+        </record>
+	
+	<record id="action_decharge" model="ir.actions.act_window">
+
+            <field name="name">decharge</field>
+
+            <field name="res_model">decharge</field>
+
+            <field name="view_type">form</field>
+
+            <field name="view_mode">tree,form</field>
+
+        </record>
+           <menuitem id="main_decharge" name="decharge"/>
+        <menuitem id="decharge_menu" name="decharge" parent="main_decharge"/>
+         <menuitem id="courses_menu" name="decharge" parent="decharge_menu" action="action_decharge"/>
+
+
+
+
+</data>
+
+</odoo>

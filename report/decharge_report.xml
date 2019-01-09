@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><odoo>
+
+    <data>
+        <report string="decharge"
+                id="report_decharge"
+                model="decharge"
+                report_type="qweb-pdf"
+                name="proodoo.decharge_report_view"
+        />
+        <record id="paperformat_specifique" model="report.paperformat">
+            <field name="name">decharge Format</field>
+            <field name="default" eval="False"/>
+            <field name="format">custom</field>
+            <field name="page_height">90</field>
+            <field name="page_width">160</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">10</field>
+            <field name="margin_right">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">10</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="proodoo.report_decharge" model="ir.actions.report">
+            <field name="paperformat_id" ref="proodoo.paperformat_specifique"></field>
+        </record>
+
+        <template id="decharge_report_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+            <div style="border-left: dotted; border-right: dotted; border-radius:5%;padding-top:5%;">
+			<h1 align="center">decharge </h1>
+                        <h2>Objet : Décharge  <div style="align:center">Le :<span t-field="doc.date"/></div></h2>
+
+                        <h2>Employe: <span t-field="doc.employe.name"/></h2>
+                <t t-foreach="doc.lignedech" t-as="ligne">
+                        <h2>quoi: <span t-field="ligne.article.name"/><span  t-field="ligne.quantite"></span></h2>
+                </t>
+			            <p></p>
+            </div>   </div>
+                </t>
+            </t>
+        </t>
+    </template>
+        </data>
+
+</odoo>
