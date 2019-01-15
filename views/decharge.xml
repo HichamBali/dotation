@@ -65,7 +65,7 @@
             <field name="view_mode">tree,form</field>
 
         </record>
-           <menuitem id="main_decharge" name="decharge"/>
+           <menuitem id="main_decharge" name="dotation"/>
         <menuitem id="decharge_menu" name="decharge" parent="main_decharge"/>
          <menuitem id="courses_menu" name="decharge" parent="decharge_menu" action="action_decharge"/>
 

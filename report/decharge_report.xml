@@ -11,8 +11,8 @@
             <field name="name">decharge Format</field>
             <field name="default" eval="False"/>
             <field name="format">custom</field>
-            <field name="page_height">90</field>
-            <field name="page_width">160</field>
+            <field name="page_height">210</field>
+            <field name="page_width">290</field>
             <field name="orientation">Portrait</field>
             <field name="margin_top">0</field>
             <field name="margin_bottom">0</field>
@@ -32,19 +32,24 @@
             <t t-foreach="docs" t-as="doc">
                 <t t-call="web.external_layout">
                     <div class="page">
-            <div style="border-left: dotted; border-right: dotted; border-radius:5%;padding-top:5%;">
 			<h1 align="center">decharge </h1>
                         <h2>Objet : Décharge  <div style="align:center">Le :<span t-field="doc.date"/></div></h2>
 
                         <h2>Employe: <span t-field="doc.employe.name"/></h2>
-                <t t-foreach="doc.lignedech" t-as="ligne">
-                        <h2>quoi: <span t-field="ligne.article.name"/><span  t-field="ligne.quantite"></span></h2>
-                </t>
-			            <p></p>
-            </div>   </div>
-                </t>
-            </t>
-        </t>
+                        <table border="1">
+                            <thead>
+                            <tr><td width="400">Article</td><td width="400">Quantite</td></tr></thead>
+                            <tbody>
+                            <t t-foreach="doc.lignedech" t-as="ligne">
+
+                            <tr>
+                                <td><span t-field="ligne.article.name"/></td>
+                                <td><span  t-field="ligne.quantite"></span></td>
+                            </tr>
+                            </t></tbody>
+                        </table>
+                    </div>
+                </t></t></t>
     </template>
         </data>
 

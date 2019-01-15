@@ -39,9 +39,10 @@
 
 
                 <tree string="ligne">
-                    <field name="quantite"/>
                     <field name="decharge"/>
                     <field name="article"/>
+                    <field name="quantite"/>
+
                 </tree>
 
             </field>

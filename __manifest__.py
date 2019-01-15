@@ -3,16 +3,17 @@
 
 
 {
-    'name': 'dodation',
+    'name': 'dotation',
     'version': '0.1',
     'author': 'Hicham bali',
     'category': 'premier module',
     'description': "Ceci est mon prmier module du tp n_3",
-    'depends': ['sale_management','hr'],
+    'depends': ['sale_management','hr','stock'],
     'installable': True,
     'application': True,
     'data': [
 
+                  'security/ir.model.access.csv',
 	              'views/decharge.xml',
 	              'views/extendingemploye.xml',
 	              'views/lignedecharge.xml',
