@@ -17,12 +17,17 @@
 
 
                 <form string="decharge">
+                     <header>
+                        <field name="etat" widget="statusbar" statusbar_visible="brouillon,valide"
+                               clickable="1" groups="stock.group_stock_manager,base.group_system,hr.group_hr_manager">
+                        </field>
+                </header>
+
 			<sheet>
                         <group>
                             <field name="date"/>
                             <field name="employe"/>
                             <field name="lignedech"/>
-                            <field name="etat"/>
                         </group>
 			</sheet>
 		</form>

@@ -5,8 +5,21 @@ id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 
 access_decharge_user,decharge.user,proodoo.model_decharge,stock.group_stock_user,1,1,0,0
 access_article_user,article.user,proodoo.model_product_template,stock.group_stock_user,1,1,0,0
+
 access_employe_user,employe.user,proodoo.model_hr_employee,stock.group_stock_user,1,1,0,0
 
 access_decharge_user_employe,decharge.user.emloye,proodoo.model_decharge,base.group_user,1,1,0,0
 access_article_user_employe,article.user.emloye,proodoo.model_product_template,base.group_user,1,1,0,0
 access_employe_user_employe,employe.user.emloye,proodoo.model_hr_employee,base.group_user,1,1,0,0
+
+access_article_manager,article.manager,proodoo.model_product_template,stock.group_stock_manager,1,1,1,1
+access_decharge_manager,decharge.manager,proodoo.model_decharge,stock.group_stock_manager,1,1,1,1
+access_employe_manager,employe.manager,proodoo.model_hr_employee,stock.group_stock_manager,1,1,1,1
+
+
+access_decharge_managerr,decharge.managerrr,proodoo.model_decharge,stock.group_stock_manager,1,1,1,1
+access_employe_managerr,employe.managerrr,proodoo.model_decharge,stock.group_stock_manager,1,1,1,1
+
+access_decharge_managerhr,decharge.managere,proodoo.model_decharge,hr.group_hr_manager,1,1,1,1
+access_article_managerhr,article.managere,proodoo.model_decharge,hr.group_hr_manager,1,1,1,1
+
