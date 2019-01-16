@@ -12,7 +12,7 @@
     'installable': True,
     'application': True,
     'data': [
-
+                   'data/categories.xml',
                   'security/ir.model.access.csv',
 	              'views/decharge.xml',
 	              'views/extendingemploye.xml',

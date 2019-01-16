@@ -1,0 +1,36 @@
+<odoo>
+		<record id="product_category_accessoire" model="product.category">
+			<field name="name">accesoire</field>
+		</record>
+
+		<record id="product_category_materiel" model="product.category">
+			<field name="parent_id" ref="product_category_accessoire"/>
+			<field name="name">materiel</field>
+		</record>
+
+		<record id="product_category_numerique" model="product.category">
+			<field name="parent_id" ref="product_category_accessoire"/>
+			<field name="name">numerique</field>
+		</record>
+
+		<record id="product_category_corps" model="product.category">
+			<field name="parent_id" ref="product_category_materiel"/>
+			<field name="name">corps</field>
+		</record>
+
+		<record id="product_category_tete" model="product.category">
+			<field name="parent_id" ref="product_category_materiel"/>
+			<field name="name">tete</field>
+		</record>
+
+		<record id="product_category_telephone" model="product.category">
+			<field name="parent_id" ref="product_category_numerique"/>
+			<field name="name">telephone</field>
+		</record>
+
+		<record id="product_category_ordinateur" model="product.category">
+			<field name="parent_id" ref="product_category_numerique"/>
+			<field name="name">ordinateur</field>
+		</record>
+
+</odoo>
